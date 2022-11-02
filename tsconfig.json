@@ -1,5 +1,22 @@
 {
   "compilerOptions": {
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "sourceMap": true,
+    "noUnusedParameters": true ,
+    "noImplicitReturns": true,
+    "noUnusedLocals"  : true,
+    "strictPropertyInitialization": true,
+
+
+
+
+
+
+
+    
+
     "target": "es5",
     "lib": [
       "dom",
