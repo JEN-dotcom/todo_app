@@ -1,5 +1,13 @@
 
 import { Todo } from "../model";
+
+import { AiFillEdit, AiFillDelete} from "react-icons/ai";
+import { MdDone } from "react-icons/md";
+import "./styles.css";
+
+
+
+
 type Props = {
     todo: Todo;
     todos: Todo[];
@@ -16,12 +24,21 @@ const SingleTodo: React.FC<Props> = ({todo, todos, setTodos}) => {
 
 
   return (
-    <form>
+    <form className="todos__single">
 
-        <span>{todo.todo}</span>
+        <span className="todos__single--text" >{todo.todo}</span>
 
         <div>
-            <span onClick={() => handleDone(todo.id)}></span>
+            <span className="icon">
+                <AiFillEdit/>
+            </span>
+
+            <span className="icon">
+                <AiFillDelete/>
+            </span>
+            <span className="icon" onClick={() => handleDone(todo.id)}>
+                <MdDone/>
+            </span>
         </div>
         
         
@@ -35,10 +52,7 @@ const SingleTodo: React.FC<Props> = ({todo, todos, setTodos}) => {
         
         
         
-        
-        
-        
-        SingleTodo
+    
 
     </form>
   )
